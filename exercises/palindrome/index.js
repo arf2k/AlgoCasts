@@ -9,12 +9,20 @@
 
 function palindrome(str) {
      const reversed = str.split('').reverse().join('')
-     if(reversed === str) {
-          return true 
-     } else {
-          return false
-     }
+     // if(reversed === str) {
+     //      return true 
+     // } else {
+     //      return false
+     // }
+     return str === reversed
 }
 
+// alternative solution
+
+// function palindrome(str){
+//     return str.split('').every((char, i) => {
+//           return char === str[str.length -i -1]; 
+//      })
+// }
 
 module.exports = palindrome;
